@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.4.2.2 (Windows)"/>
+	<meta name="created" content="2019-10-31T12:15:07.193000000"/>
+	<meta name="changed" content="2019-10-31T14:29:37.459000000"/>
+</head>
+<body lang="es-ES" dir="ltr">
+<h1>Tema 2-SSH</h1>
+<p style="margin-top: 0.42cm; page-break-after: avoid"><font face="Albany, sans-serif"><font size="4" style="font-size: 14pt">Ejercicio
+1.</font></font></p>
+<p>Antes de nada actualizamos el ubuntu de la raspberry pi 3 con:
+sudo apt update------sudo apt upgrade</p>
+<p>1- Para montar Telnet: (Realizado en raspberry pi 3)</p>
+<p>Ponemos: sudo apt-get install telnet</p>
+<p><img src="Ejercicio%201-%20tema2_html_61a69cdd7c2748f7.jpg" name="Imagen1" align="left" width="769" height="385" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Lanzamos telnet insertando: telnet y tendremos acceso a este.</p>
+<p><img src="Ejercicio%201-%20tema2_html_7f2ebd8e14e18c9d.jpg" name="Imagen2" align="left" width="1002" height="240" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>En caso de hacerlo en windows deberemos de activar el cliente
+telnet en el panel de control y seguidamente instalarlo en el cmd.</p>
+<p>Ya instalado pondremos:</p>
+<p> telnet+IP de telnet que queremos conectar.</p>
+<p><img src="Ejercicio%201-%20tema2_html_ab7342565edf89a.jpg" name="Imagen3" align="left" width="604" height="229" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>2- Lanzamos wireshark para localizar la conexi&oacute;n  telnet.</p>
+<p><br/>
+<br/>
+
+</p>
+<p><img src="Ejercicio%201-%20tema2_html_deefda6ba35f3dc0.jpg" name="Imagen4" align="left" width="918" height="243" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>3,4- Datos m&aacute;s importantes y longitud</p>
+<p>TCP - 370:  Puerto origen: 23</p>
+<p>           Puerto destino: 49379</p>
+<p>IP - 410: Versi&oacute;n: 4</p>
+<p>      Origen: 192.168.18.206</p>
+<p>      Destino: 192.168.18.188</p>
+<p>Ethernet - : IPv4</p>
+<p><br/>
+<br/>
+
+</p>
+<p>5- Buscamos login y contrase&ntilde;a de telnet:</p>
+<p><img src="Ejercicio%201-%20tema2_html_dfc0c5ffad7688cb.jpg" name="Imagen5" align="left" width="665" height="154" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>6- Creaci&oacute;n de directorio y archivo desde remoto y
+eliminaci&oacute;n de estos.</p>
+<p><img src="Ejercicio%201-%20tema2_html_715f5b1201414c30.jpg" name="Imagen6" align="left" width="659" height="286" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>

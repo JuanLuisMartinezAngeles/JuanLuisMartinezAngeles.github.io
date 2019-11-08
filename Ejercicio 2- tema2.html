@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="2019-11-05T09:41:05.624620938"/>
+	<meta name="changed" content="2019-11-07T14:30:30.871195986"/>
+</head>
+<body lang="es-ES" dir="ltr">
+<h1>TEMA 2.- SSH.</h1>
+<p style="margin-top: 0.42cm; page-break-after: avoid"><font face="Albany, sans-serif"><font size="4" style="font-size: 14pt">Ejercicio
+2</font></font></p>
+<p>1- Comprobamos que el puerto 21 para SSH esté abierto.</p>
+<p><img src="T2%20ejer2-%201.PNG" name="Imagen1" align="left" width="1035" height="306" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>2- Creamos los dos usuarios.</p>
+<p><br/>
+<br/>
+
+</p>
+<p><img src="T2%20ejer2-%202.PNG" name="Imagen2" align="left" width="564" height="388">
+  <br clear="left"/>
+</img>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>3- Probamos a acceder a los usuarios mediante SSH.</p>
+<p><img src="Ejercicio%202-%20tema2_html_be7c432c68cebace.png" name="Imagen5" align="left" width="731" height="362" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><img src="Ejercicio%202-%20tema2_html_dd3d772148c01a1a.png" name="Imagen3" align="left" width="725" height="310" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>4- Cambiamos el puerto y comprobamos:</p>
+<p>Insertamos el comando sudo nano /<i>etc/</i> ssh/sshd_config</p>
+<p>Cambiamos el apartado #Port22 por Port2222.</p>
+<p><img src="Ejercicio%202-%20tema2_html_6d01486de881100e.png" name="Imagen4" align="left" width="766" height="510" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Y reiniciamos con: sudo systemctl restart sshd y hacemos un nmap
+localhost para comprobar que ha cambiado el puerto.</p>
+<p><img src="Ejercicio%202-%20tema2_html_47f345c3cd3015f4.png" name="Imagen6" align="left" width="600" height="251" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>5- Cambiamos los usuarios para que el 1 pueda acceder pero el 2
+no.</p>
+<p> Nos metemos en sudo nano /<i>etc/</i> ssh/sshd_config e
+incorporamos el siguiente apartado: AllowUsers usuario01</p>
+<p><img src="Ejercicio%202-%20tema2_html_b0890dcf1bfbd14b.png" name="Imagen7" align="left" width="743" height="495" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>Tras esto reiniciamos con sudo systemctl restart sshd  y cuando
+intentemos loguear saldrá lo siguiente:</p>
+<p><img src="Ejercicio%202-%20tema2_html_ef805ed4b8faffa.png" name="Imagen8" align="left" width="751" height="74" border="0"/>
+<br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>6- Configuramos para que solo pueda acceder una ip de la siguiente
+forma:</p>
+<p>Nos metemos en sudo nano /<i>etc/</i> ssh/sshd_config e
+incorporamos el siguiente apartado: AllowUsers <a href="mailto:manana@192.168.18.194">manana@192.168.18.194</a></p>
+<p><img src="Ejercicio%202-%20tema2_html_e57396a63de4e7b9.png" name="Imagen10" width="731" height="488" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>7-</p>
+<p><img src="Ejercicio%202-%20tema2_html_4bc69f2ecc0127ba.png" name="Imagen9" width="773" height="491" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p>TCP:  	Puerto origen:  42730</p>
+<p>	Puerto destino: 22</p>
+<p>	Tamaño: 41 bytes</p>
+<p>IP:  	Origen: 192.168.18.194</p>
+<p>	Destino:192.168.18.206</p>
+<p>	Tamaño: 96 bytes</p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>
