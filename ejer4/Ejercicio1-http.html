@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.4.2.2 (Windows)"/>
+	<meta name="created" content="2019-12-10T08:28:46.010387650"/>
+	<meta name="changed" content="2019-12-13T13:10:30.888000000"/>
+</head>
+<body lang="es-ES" dir="ltr">
+<h1>Tema 5 &ndash; HTTP</h1>
+<p><br/>
+<br/>
+
+</p>
+<h1>Ejercicio 1</h1>
+<p><br/>
+<br/>
+
+</p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>1-
+Lanzamos el sniffer wireshark, realizamos una petici&oacute;n web y
+localizamos el HTTP de la p&aacute;gina que hemos buscado.</b></font></font></p>
+<p><img src="1.png" name="Imagen1" align="middle" width="673" height="515" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="3" style="font-size: 13pt"><b><font size="4" style="font-size: 14pt">2-
+</font><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">&iquest;Qu&eacute;
+protocolos de transporte, red y enlace utiliza HTTP?</font></font></b></font></p>
+<p style="font-weight: normal"><font size="3" style="font-size: 13pt">HTTP
+usa como protocolos: Ethernet II, IPv4 (en mi caso) y TCP.</font></p>
+<p><img src="2.png" name="Imagen2" align="middle" width="774" height="160" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>3- &iquest;Qu&eacute;
+puertos est&aacute;n implicados en la capa de transporte?</b></font></p>
+<p style="font-weight: normal">Los puertos implicados son: 
+</p>
+<p style="font-weight: normal">54792 como destino (en mi caso) y el
+80 como destino.</p>
+<p><img src="3.png" name="Imagen3" align="middle" width="730" height="52" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>&iquest;Qu&eacute; otros
+datos puedes obtener de esta capa?</b></font></p>
+<p style="font-weight: normal">Tambi&eacute;n podemos obtener la
+encapsulamiento del anterior protocolo (HTTP) en la secci&oacute;n
+TCP payload.</p>
+<p><br/>
+<br/>
+
+</p>
+<p><img src="3-2.png" name="Imagen4" align="middle" width="731" height="367" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>4- &iquest;Cu&aacute;les
+son la direcciones IP implicadas en dicha petici&oacute;n?&iquest;A
+qui&eacute;n <font color="#ce181e">corresponden</font>?</b></font></p>
+<p style="font-weight: normal">Las direcciones IP implicadas son: la
+de <font color="#ce181e">mi equipo</font>, en este caso <font color="#ce181e">192.168.18.93</font>
+como origen y la de el <font color="#ce181e">servidor HTTP</font>, en
+este caso <font color="#ce181e">192.168.18.3 (cisco/~juangu)</font>
+como destino. 
+</p>
+<p><img src="4.png" name="Imagen5" align="middle" width="1171" height="186" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>&iquest;Qu&eacute; otros
+datos puedes obtener de esta capa?</b></font></p>
+<p style="font-weight: normal"><font size="3" style="font-size: 12pt">Se
+puede obtener la versi&oacute;n del IP en este caso IPv4</font></p>
+<p><img src="4-2.png" name="Imagen8" align="middle" width="705" height="90" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>5-&iquest;Cu&aacute;les
+son la direcciones LAN implicadas en dicha petici&oacute;n?&iquest;A
+qui&eacute;n<font color="#ce181e"> corresponden</font>? </b></font>
+</p>
+<p style="font-weight: normal"><font size="3" style="font-size: 12pt">Las
+LAN implicadas son: De destino <font color="#ce181e">(servidor)</font>:
+bc : ae : c5 : 5e : 39 : fe y de origen <font color="#ce181e">(mi
+equipo)</font><font color="#000000">: </font>a0 : d3 : c1 : 32 : 5f :
+2a </font>
+</p>
+<p><img src="5.png" name="Imagen9" align="middle" width="958" height="183" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>&iquest;Qu&eacute; otros
+datos puedes obtener de esta capa? </b></font>
+</p>
+<p style="font-weight: normal"><font size="3" style="font-size: 12pt">La
+versi&oacute;n de la IP (IPv4)</font></p>
+<p><img src="5-2.png" name="Imagen10" align="middle" width="933" height="183" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>Calcula el tama&ntilde;o
+del payload de cada capa.</b></font></p>
+<p style="font-weight: normal"><font size="3" style="font-size: 12pt">TCP=
+328b</font></p>
+<p><img src="5-3.png" name="Imagen11" align="middle" width="669" height="287" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p style="font-weight: normal">IP= 380b &ndash; 20b = 360b</p>
+<p><img src="5-4.png" name="Imagen12" align="middle" width="748" height="143" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>6- &iquest;Qu&eacute;
+protocolo se utiliza HTTP/1.0 o HTTP/1.1?</b></font></p>
+<p style="font-weight: normal"><font size="3" style="font-size: 12pt">Se
+utiliza el protocolo HTTP/1.1</font></p>
+<p><img src="6.png" name="Imagen6" align="middle" width="354" height="53" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font size="4" style="font-size: 14pt"><b>7- Filtrando TCP, busca
+el acuerdo en tres bandas entre cliente y servidor. Interpr&eacute;talo.</b></font></p>
+<p style="font-weight: normal"><font size="3" style="font-size: 12pt">El
+acuerdo a tres bandas son los tres anteriores protocolos TCP los
+cuales: El primero inicia la conversaci&oacute;n el cliente al
+servidor, el segundo el servidor responde al cliente para hacerle
+saber que est&aacute; disponible y el tercero abre finalmente la
+conexi&oacute;n/conversaci&oacute;n del cliente y el servidor. </font>
+</p>
+<p><img src="7.png" name="Imagen7" align="middle" width="1179" height="82" border="0"/>
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>
