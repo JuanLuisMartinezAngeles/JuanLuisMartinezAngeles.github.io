@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.1.2 (Windows)"/>
+	<meta name="created" content="2020-01-08T08:30:40.541457732"/>
+	<meta name="changed" content="2020-03-16T18:59:30.007000000"/>
+	<style type="text/css">
+		pre.cjk { font-family: "DejaVu Sans Mono", monospace }
+	</style>
+</head>
+<body lang="es-ES" dir="ltr"><p align="center" style="margin-top: 0.42cm; page-break-after: avoid">
+<font face="Albany, sans-serif"><font size="6" style="font-size: 28pt"><b>Tema
+5- HTTP</b></font></font></p>
+<p align="center" style="margin-top: 0.11cm; margin-bottom: 0.21cm; page-break-after: avoid">
+<font face="Albany, sans-serif"><font size="5" style="font-size: 18pt">Pr&aacute;ctica:
+creaci&oacute;n de apache4 en docker.</font></font></p>
+<p><br/>
+<br/>
+
+</p>
+<h1>1- Creamos los archivos que necesitaremos para la creaci&oacute;n
+de este.</h1>
+<p><img src="ejercicio1-http-apache_html_b5805339b57cb516.png" name="Imagen1" align="middle" width="828" height="38" border="0"/>
+
+<img src="ejercicio1-http-apache_html_e7dd61bdc5964778.png" name="Imagen2" align="middle" width="828" height="39" border="0"/>
+
+<img src="ejercicio1-http-apache_html_9830da8bfd01b5f4.png" name="Imagen3" align="middle" width="831" height="83" border="0"/>
+
+<img src="ejercicio1-http-apache_html_9eac82fcb01aa072.png" name="Imagen4" align="middle" width="827" height="173" border="0"/>
+
+<img src="ejercicio1-http-apache_html_83c749606815920e.png" name="Imagen5" align="middle" width="831" height="85" border="0"/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<h1>2- Configuraci&oacute;n del servidor apache4.</h1>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Creamos
+o copiamos el fichero de configuraci&oacute;n de apache donde se
+encuentre el Dockerfile.</font></font></p>
+<p><img src="ejercicio1-http-apache_html_3bef2fca7acc9835.png" name="Imagen6" align="bottom" width="594" height="59" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Y
+modificamos el Dockerfile.</font></font></p>
+<p><img src="ejercicio1-http-apache_html_3e4f4ebf81d89280.png" name="Imagen7" align="bottom" width="581" height="125" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">A&ntilde;adimos
+el archivo oculto .htpasswd</font></font></p>
+<p><img src="ejercicio1-http-apache_html_665d6a9b7f7cae7e.png" name="Imagen8" align="bottom" width="600" height="110" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Y
+lo a&ntilde;adimos al Dockerfile</font></font></p>
+<p><img src="ejercicio1-http-apache_html_b92f64db038ef9f7.png" name="Imagen9" align="bottom" width="919" height="137" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">A&ntilde;adimos
+lo siguiente al fichero de configuraci&oacute;n para que tenga efecto
+la autenticaci&oacute;n.</font></font></p>
+<p><img src="ejercicio1-http-apache_html_2b05547669dbbeae.png" name="Imagen10" align="bottom" width="488" height="119" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Creamos
+un fichero para automatizar los cambios que se realizan en el
+servidor/contenedor llamado reload.sh</font></font></p>
+<p><img src="ejercicio1-http-apache_html_3d0547b69872784f.png" name="Imagen11" align="bottom" width="598" height="306" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Despu&eacute;s
+tenemos que crear la auntenticaci&oacute;n DIGEST de la siguiente
+manera:</font></font></p>
+<p><img src="ejercicio1-http-apache_html_cfe528190b0ea31d.png" name="Imagen12" align="bottom" width="601" height="114" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Modificamos
+el Dockerfile,</font></font></p>
+<p><img src="ejercicio1-http-apache_html_b9ce02763b095f7c.png" name="Imagen13" align="bottom" width="564" height="176" border="0"/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">y
+el fichero de configuraci&oacute;n para que haga efecto</font></font></p>
+<pre class="western" style="margin-bottom: 0.5cm"><img src="ejercicio1-http-apache_html_3eedf4df4b445e82.png" name="Imagen14" align="bottom" width="480" height="139" border="0"/>
+</pre><p>
+<br/>
+<br/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Tambi&eacute;n
+modificamos el reload.sh para que genere la seguridad SSL cada vez
+que iniciamos el servidor/contenedor.</font></font></p>
+<p><img src="ejercicio1-http-apache_html_7665132478134329.png" name="Imagen15" align="bottom" width="602" height="494" border="0"/>
+
+</p>
+<p><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Y
+tambi&eacute;n tenemos que modificar el Dockerfile y el fichero de
+configuraci&oacute;n para que haga efecto.</font></font></p>
+<p><img src="ejercicio1-http-apache_html_5a9d61f5a2b563c9.png" name="Imagen16" align="bottom" width="590" height="222" border="0"/>
+
+</p>
+<p><img src="ejercicio1-http-apache_html_e40e6098b1fc9077.png" name="Imagen17" align="bottom" width="638" height="269" border="0"/>
+
+</p>
+<p><font color="#000000"><font face="Tibetan Machine Uni"><font size="4" style="font-size: 14pt">Tras
+esto realizaremos el reload.sh y ya estar&iacute;a el servidor apache
+instalado.</font></font></font></p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>
